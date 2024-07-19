@@ -10,6 +10,7 @@
 		C096008F2C4AF0E300BE8E12 /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C096008E2C4AF0E300BE8E12 /* SetViewModel.swift */; };
 		C09600912C4AF0F200BE8E12 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09600902C4AF0F200BE8E12 /* SetGame.swift */; };
 		C09600932C4B06E500BE8E12 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09600922C4B06E500BE8E12 /* CardView.swift */; };
+		C09600952C4B0E5D00BE8E12 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09600942C4B0E5D00BE8E12 /* Diamond.swift */; };
 		C0CC5E252C4AEF1900E2F324 /* SetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC5E242C4AEF1900E2F324 /* SetApp.swift */; };
 		C0CC5E272C4AEF1900E2F324 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CC5E262C4AEF1900E2F324 /* SetView.swift */; };
 		C0CC5E292C4AEF1900E2F324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0CC5E282C4AEF1900E2F324 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		C096008E2C4AF0E300BE8E12 /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
 		C09600902C4AF0F200BE8E12 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
 		C09600922C4B06E500BE8E12 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C09600942C4B0E5D00BE8E12 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		C0CC5E212C4AEF1900E2F324 /* Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Set.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0CC5E242C4AEF1900E2F324 /* SetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetApp.swift; sourceTree = "<group>"; };
 		C0CC5E262C4AEF1900E2F324 /* SetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				C0CC5E262C4AEF1900E2F324 /* SetView.swift */,
 				C0CC5E322C4AEF5800E2F324 /* AspectVGrid.swift */,
 				C09600922C4B06E500BE8E12 /* CardView.swift */,
+				C09600942C4B0E5D00BE8E12 /* Diamond.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				C0CC5E272C4AEF1900E2F324 /* SetView.swift in Sources */,
 				C096008F2C4AF0E300BE8E12 /* SetViewModel.swift in Sources */,
 				C09600912C4AF0F200BE8E12 /* SetGame.swift in Sources */,
+				C09600952C4B0E5D00BE8E12 /* Diamond.swift in Sources */,
 				C0CC5E252C4AEF1900E2F324 /* SetApp.swift in Sources */,
 				C09600932C4B06E500BE8E12 /* CardView.swift in Sources */,
 				C0CC5E332C4AEF5800E2F324 /* AspectVGrid.swift in Sources */,
