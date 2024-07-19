@@ -11,7 +11,7 @@ struct Diamond: Shape {
     func path(in rect: CGRect) -> Path {
         
         var p = Path()
-        let width: CGFloat = 0.7
+        let width: CGFloat = rect.height / (rect.width * 2.2)
         
         let p1 = CGPoint(x: rect.midX, y: rect.maxY)
         let p2 = CGPoint(x: (1 + width) * rect.midX, y: rect.midY)

@@ -23,9 +23,17 @@ struct CardView: View {
             Group {
                 base.fill(.white)
                 base.strokeBorder(lineWidth: Constants.lineWidth)
-                Diamond()
-                    .fill(color)
-                    .padding(8)
+                VStack {
+                    Diamond()
+                        .fill(color)
+                        .padding(8)
+                    Diamond()
+                        .fill(color)
+                        .padding(8)
+                    Diamond()
+                        .fill(color)
+                        .padding(8)
+                }
             }
             .offset(x: 0, y: card.selected ? Constants.offsetWhenSelected : 0)
             .shadow(radius: card.selected ? Constants.shadowRadiusWhenSelected : 0)
