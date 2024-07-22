@@ -9,9 +9,11 @@ import Foundation
 
 struct SetGame {
     private(set) var deck: Array<Card>
+    private(set) var score: Int
     
     init() {
         deck = []
+        score = 0
         var cardId = 1
         for n in 1...3 {
             for shading in Card.Shading.allCases {

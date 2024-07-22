@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SetViewModel: ObservableObject {
     
@@ -38,5 +39,14 @@ class SetViewModel: ObservableObject {
     
     var allCardsDealt: Bool {
         model.deck.filter{ !$0.dealt }.isEmpty
+    }
+    
+    var selectionShadowColor: Color {
+        if model.selectedCardsOnTable.count < 3 {
+            return .black
+        } else if model.cardsAreASet(model.selectedCardsOnTable) {
+            return .green
+        }
+        return .red
     }
 }

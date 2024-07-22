@@ -35,7 +35,7 @@ struct SetView: View {
     
     var cards: some View {
         AspectVGrid(viewModel.cardsOnTable, aspectRatio: cardAspectRatio) { card in
-            CardView(card)
+            CardView(card, shadowColor: viewModel.selectionShadowColor)
                 .padding(4)
                 .onTapGesture {
                     viewModel.choose(card)

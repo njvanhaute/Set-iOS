@@ -10,11 +10,16 @@ import SwiftUI
 struct CardView: View {
     let card: SetGame.Card
     let color: Color
+    let shape: CardShape
+    let shadowColor: Color
     
-    init(_ card: SetGame.Card) {
+    init(_ card: SetGame.Card, shadowColor: Color) {
         self.card = card
         let colorMap: [SetGame.Card.Color: Color] = [.red : .red, .green : .green, .purple : .purple]
         self.color = colorMap[card.color]!
+        let shapeMap: [SetGame.Card.Shape : CardShape] = [.diamond : .diamond, .squiggle: .squiggle, .oval : .oval]
+        self.shape = shapeMap[card.shape]!
+        self.shadowColor = shadowColor
     }
 
     var body: some View {
@@ -23,20 +28,29 @@ struct CardView: View {
             Group {
                 base.fill(.white)
                 base.strokeBorder(lineWidth: Constants.lineWidth)
-                VStack {
-                    Diamond()
-                        .fill(color)
-                        .padding(8)
-                    Diamond()
-                        .fill(color)
-                        .padding(8)
-                    Diamond()
-                        .fill(color)
-                        .padding(8)
-                }
+                shapeStack.padding(8)
             }
             .offset(x: 0, y: card.selected ? Constants.offsetWhenSelected : 0)
-            .shadow(radius: card.selected ? Constants.shadowRadiusWhenSelected : 0)
+            .shadow(color: shadowColor, radius: card.selected ? Constants.shadowRadiusWhenSelected : 0)
+        }
+    }
+    
+    var shapeStack: some View {
+        VStack {
+            ForEach(0..<card.number, id: \.self) { _ in
+                applyShading(to: shape)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func applyShading(to shape: CardShape) -> some View {
+        if card.shading == .open {
+            shape.stroke(color)
+        } else if card.shading == .solid {
+            shape.fill(color)
+        } else {
+            shape.fill(color).opacity(0.4)
         }
     }
     
@@ -55,6 +69,6 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(SetGame.Card(id: 1, number: 3, shading: .solid, color: .purple, shape: .diamond))
+    CardView(SetGame.Card(id: 1, number: 3, shading: .solid, color: .purple, shape: .diamond), shadowColor: .green)
         .padding()
 }
